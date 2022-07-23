@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1023.0" stylesheets="@../../bin/application/tvComptes.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminMenuController2" >
+   <children>
+      <ImageView fitHeight="813.0" fitWidth="1273.0" layoutX="-83.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/AgenceBancaire/imagesbanque/stack-new-design-us-dollar-bills-close-up-light-grey-background-stack-new-design-dollar-bills-112954229.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="417.0" layoutY="6.0" prefHeight="64.0" prefWidth="253.0" text="BANK ACCOUNTS" textFill="#e40000">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvComptes" layoutX="361.0" layoutY="226.0" onMouseClicked="#ShowInfo" prefHeight="494.0" prefWidth="648.0">
+        <columns>
+          <TableColumn fx:id="colIdCompte" prefWidth="192.79998779296875" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="236.00006103515625" text="Name" />
+            <TableColumn fx:id="colBalance" prefWidth="217.5999755859375" text="Balance " />
+        </columns>
+      </TableView>
+      <VBox layoutX="14.0" layoutY="345.0" prefHeight="134.0" prefWidth="138.0" spacing="40.0">
+         <children>
+            <Label text="NAME " textFill="#bf281a">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="121.0" text="BALANCE" textFill="#d71515">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="108.0" layoutY="345.0" prefHeight="104.0" prefWidth="220.0" spacing="30.0">
+         <children>
+            <TextField fx:id="tfName" prefHeight="35.0" prefWidth="232.0" promptText="Enter Name" />
+            <TextField fx:id="tfBalance" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="186.0" promptText="Enter Balance " />
+         </children>
+      </VBox>
+      <Button fx:id="btnNew" layoutX="42.0" layoutY="530.0" mnemonicParsing="false" onAction="#AddAccount" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #D2B4DE;" text="NEW">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear" layoutX="201.0" layoutY="530.0" mnemonicParsing="false" onAction="#DeleteAccount" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #D2B4DE;" text="CLEAR ">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="54.0" fitWidth="63.0" layoutX="361.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/AgenceBancaire/imagesbanque/icons8-bank-64%20(3).png" />
+         </image>
+      </ImageView>
+      <Line endX="234.81060791015625" layoutX="106.0" layoutY="311.0" startX="8.810562133789062" stroke="#17d944" />
+      <Line endX="13.810531616210938" endY="344.800048828125" layoutX="328.0" layoutY="230.0" startX="13.810546875" startY="81.0" stroke="#17d944" />
+      <Line endX="226.610595703125" layoutX="114.0" layoutY="575.0" startX="-109.18943786621094" stroke="#09e048" style="-fx-fill: #B09A41;" />
+      <Line endX="13.810534477233887" endY="354.60003662109375" layoutX="-7.0" layoutY="220.0" startX="13.810546875" startY="87.79998779296875" stroke="#17d944" />
+      <Label alignment="TOP_CENTER" layoutX="22.0" layoutY="297.0" prefHeight="18.0" prefWidth="100.0" text="Account" textFill="#ef2424">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>  
+      <Line endX="-75.58943176269531" endY="1.5" layoutX="113.0" layoutY="308.0" startX="-107.68946838378906" startY="1.5" stroke="#17d944" />
+      <Label layoutX="394.0" layoutY="160.0" />
+      <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="458.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/SpEvent/src/images/Icons/icons8-search-64.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfRechercherapide" layoutX="500.0" layoutY="181.0" prefHeight="26.0" prefWidth="432.0" promptText="Chercher rapidement ..." />
+      <ImageView fitHeight="54.0" fitWidth="33.0" layoutX="47.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/AgenceBancaire/imagesbanque/icons8-plus-+-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="199.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/AgenceBancaire/imagesbanque/icons8-remove-48.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="-4.0" layoutY="-2.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="38.0" prefWidth="115.0" text="Log Out" textFill="#e71010" AnchorPane.leftAnchor="-4.0" AnchorPane.topAnchor="-2.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelIDInfo" alignment="CENTER" layoutX="89.0" layoutY="226.0" prefHeight="34.0" prefWidth="126.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="477.0" prefHeight="54.0" prefWidth="227.0" text="Choose Your Operation  " textFill="#150101">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="56.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/SpEvent/src/images/Icons/icons8-bot-30.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

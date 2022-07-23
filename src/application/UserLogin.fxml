@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="676.0" style="-fx-background-color: #030200;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserLoginController">
+   <children>
+      <ImageView fitHeight="234.0" fitWidth="415.0" layoutX="121.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/AgenceBancaire/imagesbanque/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="107.0" layoutX="311.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Asus/eclipse-workspace/SpEvent/src/images/lock.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="127.0" layoutY="307.0" text="USER NAME" textFill="#d2d909">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="361.0" text="PASSWORD" textFill="#f4fc00">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label> 
+      <TextField fx:id="tfUsername" layoutX="351.0" layoutY="307.0" prefHeight="35.0" prefWidth="170.0" promptText="Username" />
+      <Button fx:id="btnUserLogin" layoutX="269.0" layoutY="423.0" mnemonicParsing="false" onAction="#UserMenu" prefHeight="46.0" prefWidth="178.0" style="-fx-background-color: #E7E61B;" text="LOG IN ">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="pfpassword" layoutX="351.0" layoutY="361.0" prefHeight="35.0" prefWidth="170.0" promptText="Password" />
+      <TextArea layoutX="68.0" layoutY="231.0" prefHeight="46.0" prefWidth="588.0" style="-fx-background-color: #A4DC21;" text="                PLEASE ENTER &quot;TPJAVA&quot; in USER NAME AND &quot;BI&quot; in PASSWORD&#10;                       TO CONFIRM THAT YOU ARE HUMAN !! ">
+         <font>
+            <Font name="Comic Sans MS Bold" size="11.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="btnback" layoutY="2.0" mnemonicParsing="false" onAction="#backMenu2" prefHeight="35.0" prefWidth="59.0" style="-fx-background-color: yellow;" text="Back" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
