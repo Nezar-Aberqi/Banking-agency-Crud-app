@@ -54,7 +54,7 @@ public class ClientFrameController {
 	private Label labelBalance;
 
 	// Event Listener on Button[#btnShowOps].onAction
-	// consulter le relevé bancaire apres avoir cliquer sur "Show bank Statment".
+	// consulter le relevÃ© bancaire apres avoir cliquer sur "Show bank Statment".
 	@FXML
 	public void ShowBankStatement(ActionEvent event) {
 	//	labelName.setText();
@@ -132,7 +132,7 @@ public class ClientFrameController {
 			 }
 	}
 	// Event Listener on  Button[#btnLogOut].onAction
-	// revenir vers la première scène.
+	// revenir vers la premiÃ¨re scÃ¨ne.
 		@FXML
 		public void LogOut(ActionEvent event) throws IOException {
 			Main m  = new Main () ; 
@@ -140,17 +140,17 @@ public class ClientFrameController {
 		    
 		}
 		
-	// établir une connecetion avec notre base de données.
+	// Ã©tablir une connecetion avec notre base de donnÃ©es.
 	public  Connection getConnection() {
 		try {
-			Connection conx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/nezardb","root", "nezarab01");
+			Connection conx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/nezardb","root", "password");
 				return conx  ; 
 			}catch(Exception e) {
 				System.out.println("Erreur!!");
 				return null ;  
 	     	}
 	}
-	// cette méthode est utilisé pour éviter de redondance de ce bloc de code dans chaque reqete SQL. 
+	// cette mÃ©thode est utilisÃ© pour Ã©viter de redondance de ce bloc de code dans chaque reqete SQL. 
 	public void dothequery(String query) {
 		Connection  conx = getConnection(); 
 		java.sql.Statement st ;
@@ -162,7 +162,7 @@ public class ClientFrameController {
 		}
 	}
 	
-	// Cette méthode nous permet de récupérer le ResultSet et le placer dans une ObservableList.
+	// Cette mÃ©thode nous permet de rÃ©cupÃ©rer le ResultSet et le placer dans une ObservableList.
 	public  ObservableList<Operation> getOperations(){
 		 ObservableList<Operation> OperationsList = FXCollections.observableArrayList();
 		 Connection connect = getConnection();
@@ -183,7 +183,7 @@ public class ClientFrameController {
 		}
 		 return OperationsList ;  
 	 }
-	// remplir notre tableview avec le contenu du ResultSet qui a été placé dans une ObservableList. 
+	// remplir notre tableview avec le contenu du ResultSet qui a Ã©tÃ© placÃ© dans une ObservableList. 
     public void DisplayOperations() {
     	ObservableList<Operation> array = getOperations(); 
     	
